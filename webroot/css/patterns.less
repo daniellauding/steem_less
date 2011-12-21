@@ -464,52 +464,70 @@ a.menu:after,
 				}
 			}
 		}
-		/* ICONS */
-
-		&.partner-tools {
-			background:transparent url(gfx/sprite.png) no-repeat 2px 10px;
-			&.active {
-				background:transparent url(gfx/sprite.png) no-repeat -38px 10px;
-			}
-		}
-		&.user-log {
-			background:transparent url(gfx/sprite.png) no-repeat 3px -29px;
-			&.active {
-				background:transparent url(gfx/sprite.png) no-repeat -38px -29px;
-			}
-		}
-		&.addresslists {
-			background:transparent url(gfx/sprite.png) no-repeat 2px -70px;
-			&.active {
-				background:transparent url(gfx/sprite.png) no-repeat -38px -70px;
-			}
-		}
-		&.groups {
-			background:transparent url(gfx/sprite.png) no-repeat 2px -109px;
-			&.active {
-				background:transparent url(gfx/sprite.png) no-repeat -38px -109px;
-			}
-		}
-		&.order-history {
-			background:transparent url(gfx/sprite.png) no-repeat 2px -151px;
-			&.active {
-			background:transparent url(gfx/sprite.png) no-repeat -38px -151px;
-			}
-		}
-		&.order-approval {
-			background:transparent url(gfx/sprite.png) no-repeat 2px -191px;
-			&.active {
-			background:transparent url(gfx/sprite.png) no-repeat -38px -191px;
-			}
-		}
-		&.statistics {
-			background:transparent url(gfx/sprite.png) no-repeat 2px -231px;
-			&.active {
-			background:transparent url(gfx/sprite.png) no-repeat -38px -231px;
-			}
-		}
 	}	
 }
+
+/* ICONS */
+
+	/* Sidebar: Client */
+
+	.partner-tools {
+		background:transparent url(gfx/sprite.png) no-repeat 2px 10px;
+		&.active {
+			background:transparent url(gfx/sprite.png) no-repeat -38px 10px;
+		}
+	}
+	
+	.user-log {
+		background:transparent url(gfx/sprite.png) no-repeat 3px -29px;
+		&.active {
+			background:transparent url(gfx/sprite.png) no-repeat -38px -29px;
+		}
+	}
+	
+	.addresslists {
+		background:transparent url(gfx/sprite.png) no-repeat 2px -70px;
+		&.active {
+			background:transparent url(gfx/sprite.png) no-repeat -38px -70px;
+		}
+	}
+	
+	.groups {
+		background:transparent url(gfx/sprite.png) no-repeat 2px -109px;
+		&.active {
+			background:transparent url(gfx/sprite.png) no-repeat -38px -109px;
+		}
+	}
+	
+	.order-history {
+		background:transparent url(gfx/sprite.png) no-repeat 2px -151px;
+		&.active {
+		background:transparent url(gfx/sprite.png) no-repeat -38px -151px;
+		}
+	}
+	
+	.order-approval {
+		background:transparent url(gfx/sprite.png) no-repeat 2px -191px;
+		&.active {
+		background:transparent url(gfx/sprite.png) no-repeat -38px -191px;
+		}
+	}
+	
+	.statistics {
+		background:transparent url(gfx/sprite.png) no-repeat 2px -231px;
+		&.active {
+		background:transparent url(gfx/sprite.png) no-repeat -38px -231px;
+		}
+	}
+	
+	/* Random */
+	
+	.view-shop {
+		background:transparent url(gfx/sprite.png) no-repeat 2px -271px;
+		&.active {
+		background:transparent url(gfx/sprite.png) no-repeat -38px -231px;
+		}
+	}
 
 // SECOND NAVIGATION
 // ------
@@ -536,6 +554,21 @@ a.menu:after,
 			vertical-align:middle;
 		}
 	}
+
+	.view-shop {
+		margin-top:10px;
+		background:transparent url(gfx/sprite.png) no-repeat -205px 12px;
+		display:inline-block;
+		float:right;
+		width:70px;
+		padding-left:23px;
+		color:@gray;
+			&:hover {
+				color:@blue;
+				background:transparent url(gfx/sprite.png) no-repeat -355px 12px;
+			}
+	}
+	
 	.nav {
 		li {
 			position:relative;
@@ -640,6 +673,53 @@ a.menu:after,
 	top:13px;
 	z-index:999;
 	.box-shadow(0px 1px 0px rgba(0,0,0,0.8));
+}
+
+// THUMBNAIL
+// --------------
+
+.thumbnail {
+	&.lifted {
+		display:table;
+		margin:0 auto;
+		position: relative;
+		padding: 3px;
+		background: white;
+		.box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+		img {display:block;}
+		&:before {
+			bottom:1px;
+		    left:10px;
+		    .box-shadow(0 15px 10px rgba(0, 0, 0, 0.7));
+		    -webkit-transform:rotate(-3deg);    
+		       -moz-transform:rotate(-3deg);   
+		        -ms-transform:rotate(-3deg);   
+		         -o-transform:rotate(-3deg);
+		            transform:rotate(-3deg);
+		}
+		&:after {
+			bottom:15px;
+		    left:10px;
+		    width:50%;
+		    height:20%;
+		    max-width:300px;
+		    .box-shadow(0 15px 10px rgba(0, 0, 0, 0.7));
+		    -webkit-transform:rotate(-3deg);    
+		       -moz-transform:rotate(-3deg);   
+		        -ms-transform:rotate(-3deg);   
+		         -o-transform:rotate(-3deg);
+		            transform:rotate(-3deg);
+		}
+		&:after {
+			right:10px; 
+		    left:auto;
+		    -webkit-transform:rotate(3deg);   
+		       -moz-transform:rotate(3deg);  
+		        -ms-transform:rotate(3deg);  
+		         -o-transform:rotate(3deg);
+		            transform:rotate(3deg);
+		}
+	}
 }
 
 // SHORT STATS 
