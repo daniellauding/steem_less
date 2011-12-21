@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Steem Framework</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script src="webroot/js/jquery-1.4.2.min.js"></script>
+		<script src="webroot/js/jquery.include.min.js"></script>
+		<script src="webroot/js/bootstrap-twipsy.js"></script>
+		<script src="webroot/js/scripts.js"></script>
+
+		<link rel="stylesheet/less" href="webroot/css/imports.less">
+		<script src="webroot/js/less-1.1.3.min.js"></script>
+		
+		<link rel="shortcut icon" href="webroot/favicon.ico">
+		
+		<script type="text/javascript" charset="utf-8">
+		    less.env = "development";
+		    less.watch();
+		</script>
+
+	</head>
+
+	<body>
+		
+		<div id="header">
+			<span data-src="views/elements/header.html"></span>
+		</div>
+		
+		<div class="client-nav">
+			<span data-src="views/elements/menus/client-nav.html"></span>
+		</div>
+		
+		<div class="container">
+            <span data-src="views/layouts/superadmin/index.html"></span>
+        </div>
+		
+		<div id="footer">
+			<span data-src="views/elements/footer.html"></span>
+		</div>
+
+	</body>
+</html>
