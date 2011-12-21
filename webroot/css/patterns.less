@@ -8,6 +8,7 @@
 
 // Topbar for Branding and Nav
 .topbar {
+	border-top:2px solid @blue;
   height: 40px;
   position: fixed;
   top: 0;
@@ -19,7 +20,28 @@
 	.help-inline {
 		line-height:37px;
 		a {
-			color:#e9b030;
+			color:@blue;
+			text-decoration:underline;
+		}
+	}
+	
+	.superadmin-link {
+		float:left;
+		margin:0 20px 0 0;
+		font-weight:bold
+	}
+	
+	.switch-client  {
+		margin:2px auto 0;
+		width:300px;
+		label {
+			width:80px;
+			float:left;
+			color:@grayLight;
+			text-align:left;
+		}
+		.input {
+			float:left;
 		}
 	}
 
@@ -122,15 +144,9 @@
 // For backwards compatibility, include .topbar .fill
 .topbar-inner,
 .topbar .fill {
-	background: #1c4162;
-	background: -moz-linear-gradient(top, #1b3e5e 0%, #183754 49%, #152f47 50%, #16324c 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1c4162), color-stop(49%,#183754), color-stop(50%,#152f47), color-stop(100%,#16324c));
-	background: -webkit-linear-gradient(top, #1c4162 0%,#183754 49%,#152f47 50%,#16324c 100%);
-	background: -o-linear-gradient(top, #1c4162 0%,#183754 49%,#152f47 50%,#16324c 100%);
-	background: -ms-linear-gradient(top, #1c4162 0%,#183754 49%,#152f47 50%,#16324c 100%);
-	background: linear-gradient(top, #1c4162 0%,#183754 49%,#152f47 50%,#16324c 100%);
-	@shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-	.box-shadow(@shadow);
+	#gradient > .vertical(#474747, #0E0E0E);
+	.box-shadow(inset 0 -1px 0px #fff);
+	border-bottom:1px solid #eeeeee;	
 }
 
 
@@ -151,17 +167,17 @@
     display: block;
     float: left;
 	&.divider {
-		background:#344c62;
+		#gradient > .vertical(rgba(0,0,0,0.07), rgba(255,255,255,0.04));
 		width:1px;
-		height:40px;
-		border-left:1px solid #142e46;
+		height:39px;
+
 	}
   }
   a {
     display: block;
     float: none;
     padding: 10px 10px 11px;
-    line-height: 19px;
+    line-height: 16px;
     text-decoration: none;
     &:hover {
       color: @white;
@@ -197,7 +213,7 @@
   // .menu-dropdown for backwards compatibility
   .menu-dropdown,
   .dropdown-menu {
-    background-color: #203b54;
+    background-color: #151515;
     // a.menu for backwards compatibility
     a.menu,
     .dropdown-toggle {
@@ -249,7 +265,7 @@ a.menu:after,
   content: "&darr;";
   text-indent: -99999px;
   vertical-align: top;
-  margin-top: 8px;
+  margin-top: 6px;
   margin-left: 4px;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
@@ -264,7 +280,7 @@ a.menu:after,
   float: left;
   display: none; // None by default, but block on "open" of the menu
   position: absolute;
-  top: 40px;
+  top: 37px;
   z-index: 900;
   min-width: 160px;
   max-width: 220px;
@@ -342,9 +358,9 @@ a.menu:after,
 // ------
 
 .client-nav {
-  	#gradient > .vertical(#ffffff, #f8f8f8);
-	.box-shadow(inset 0 -1px 0px #fff);
-	border-bottom:1px solid #eeeeee;
+  	#gradient > .vertical(#ffffff, #E0E0E3);
+	.box-shadow(inset 0 -1px 0px #EEEEEE);
+	border-bottom:1px solid #D9D9D9;
 	height:60px;
 	width:100%;
 	.client {
@@ -352,7 +368,7 @@ a.menu:after,
 		line-height:56px;
 		padding-right:15px;
 		height:60px;
-		border-right:1px solid #eeeeee;
+/*		border-right:1px solid #eeeeee;*/
 		h1 {
 			line-height:60px;
 			font-weight:normal;
@@ -370,43 +386,86 @@ a.menu:after,
 				color:@blue;
 				font-weight:bold;
 				padding:20px 15px 20px;
-				border-right:1px solid #eeeeee;
+/*				border-right:1px solid #eeeeee;*/
 				&.dropdown-toggle:after {
 					border-top:4px solid @gray
 				}
 				&:hover {
-					background:@white;
 					color:@blueDark;
 					padding-top:21px;
 				}
 			}
-			ul.dropdown-menu {
-				display:block;
-				top:60px;
-				background:#fff;
-				border:1px solid #eeeeee;
-				.box-shadow(0 4px 5px @grayLight);
-				padding-top:0;
-				li {
-					a {
-						border-right:0;
-						text-shadow:none;
-						padding:20px 15px 20px;
-						&:hover {background:transparent;border:0;}
-					}
-				}
-			}
 		&.selected {
 			a {
+				border-right:1px solid #E7E7E7;
+				border-left:1px solid #E7E7E7;
 				background:#fff;
 				height:21px;
+				color:@gray;
 				&:hover {
 					padding:20px 15px 20px;
 				}
 			}
 		}
+		&.dropdown {
+			&:hover {
+				a {
+					background:#fff;
+					.border-radius(6px 6px 0 0px);
+					padding:10px 15px;
+					margin-top:10px;
+					border-color: #999;
+					border-color: rgba(0,0,0,.2);
+					border-style: solid;
+					border-width: 1px 1px 0px;
+					z-index:9999;
+					position:relative
+				}
+			}
+			ul.dropdown-menu {
+				display:block;
+				top:46px;
+				background:#fff;
+				border:1px solid #eeeeee;
+				padding-top:0;
+				padding-bottom:2px;
+				border-color: #999;
+				border-color: rgba(0,0,0,.2);
+				border-style: solid;
+				border-width: 1px 1px 1px;
+				.border-radius(0 6px 6px 6px);
+				.box-shadow(0 2px 2px rgba(0,0,0,.2));
+				.background-clip(padding-box);
+				background:@white;
+				z-index:9888;
+				li {
+					a {
+						border-right:0;
+						text-shadow:none;
+						padding:13px 13px 13px;
+						margin:0;
+						border:none;
+						&:hover {background:transparent;border-width:0;}
+					}
+				}
+			}
+
+		}
 		}
 	}
+
+	.switch-client {
+		margin-top:12px;
+		float:right;
+		label {
+			color:@gray;
+			float:left;
+			width:45px;
+			text-align:left;
+		}
+		.input{float:left;}
+	}
+
 }
 
 .notify {
@@ -799,6 +858,18 @@ input[type=submit].btn {
   }
 }
 
+// BOX STYLE
+// -----------
+
+.box {
+	#gradient > .vertical(#F4F4F4, #F2F2F2);
+    border: 1px solid #ECECEC;
+    .border-radius(6px 6px 6px 6px);
+    .box-shadow(0 1px 2px #BBBBBB, 0 1px 0 #FFFFFF inset);
+	&:hover {
+		#gradient > .vertical(#f9f9f9, #f7f7f7);
+	}
+}
 
 // CLOSE ICONS
 // -----------
@@ -942,23 +1013,22 @@ ul.item-list {
 	margin-bottom:0;
 	padding:1px;
 	li {
+		position:relative;
 		display:block;
 		float:left;
-		margin:0 0 18px 20px;
-		min-height:215px;
+		margin:2px 0 18px 20px;
+		min-height:150px;
+		width:215px;
 		.company-image {
-			width:160px;
-			height:133px;
+			width:195px;
 			display:block;
-			background:#fbfbfb;
-			.border-radius(3px);
-			border:1px solid @grayLighter;		
 			text-decoration:none;
-			padding:10px;
-			line-height:130px;
+			padding:10px 10px 8px;
 			text-align:center;
 			a {
-				border:1px dashed @grayLighter;
+				height:80px;
+				line-height:80px;
+				border:1px solid @grayLighter;
 				display:block;
 				background:@white;
 				&:hover {
@@ -984,8 +1054,35 @@ ul.item-list {
 			color:@blue;
 			text-align:center;
 			line-height:@baseline;
-			margin-top:8px;
+			margin-top:0px;
+			margin-bottom:2px
 		}
+		.badge {
+		    display: block;
+		    height: 62px;
+		    position: absolute;
+		    right: -5px;
+		    top: -4px;
+		    width: 62px;
+		}
+	&.new {
+		border:2px dashed #DBDBDB;
+		.border-radius(6px);		
+		margin-bottom:0;
+		a {
+			font-size:14px;
+			color:#939292;
+			width:215px;
+			display:block;
+			height:150px;
+			text-align:center;
+			line-height:220px;
+		}
+		&:hover {
+			border:2px dashed @blue;
+			a {color:@blue;}
+		}
+	}
 	}
 }
 
@@ -1055,6 +1152,9 @@ ul.item-list {
   h6 {
 	line-height:18px;
 }
+p {
+	font-size:@basefont - 2px;
+	}
 }
 
 

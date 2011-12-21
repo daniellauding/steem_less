@@ -16,12 +16,14 @@ body {
   margin: 0;
   #font > .sans-serif(normal,@basefont,@baseline);
   color: @grayDark;
-  padding-top:40px;
+  padding-top:45px;
 }
 
 // Container (centered, fixed-width layouts)
 .container {
   .fixed-container();
+	line-height:35px;
+	position:relative;
 }
 
 .content {
@@ -37,7 +39,10 @@ body {
 
 .sidebar {
 	width: 220px;
-	float:right;
+	float:left;
+	&.help {
+		float:right;
+	}
 }
 
 #footer {
