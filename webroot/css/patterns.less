@@ -426,6 +426,16 @@ a.menu:after,
 				}
 			}
 		&.active {
+			ul {
+				li {
+					&.active {
+						a{color:@blue;font-weight:bold;}
+					}
+				 a {
+					color:@gray;
+				}	
+				}
+			}
 			&.collapsed {
 				&:after {
 					width: 0;
