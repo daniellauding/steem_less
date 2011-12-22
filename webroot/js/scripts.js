@@ -34,7 +34,7 @@ $(document).includeReady(function () {
 
 	$("table.tablesorter").tablesorter({ sortList: [[1,0]] });
 	
-	var page_header = $('.page-header h1').clone().children().remove().end().text();
+	var page_header = $('div.page-header > h1').clone().children().remove().end().text().trim()
 
 	$(".vertical-nav a:contains(page_header)").addClass("active");
 
