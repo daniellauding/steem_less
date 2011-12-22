@@ -15,7 +15,7 @@ $(document).includeReady(function () {
     }
 
     if (vertical_ul.length) {
-        vertical_ul.find('li a').toggle(function() {
+        vertical_ul.find('li.sub a.toggle-sub').toggle(function() {
 			$(this).parent().addClass('expanded');
             $(this).parent().children('ul').show();
 		return false;
@@ -33,5 +33,11 @@ $(document).includeReady(function () {
     });
 
 	$("table.tablesorter").tablesorter({ sortList: [[1,0]] });
+	
+	   var page_header = $('.page-header h1').text();
+
+	$('.vertical-nav').find(page_header).addClass('active');
+	
+	console.log(page_header);
 
 });
