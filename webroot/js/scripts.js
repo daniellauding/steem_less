@@ -36,6 +36,6 @@ $(document).includeReady(function () {
 	
 	var page_header = $('div.page-header > h1').clone().children().remove().end().text().trim()
 
-	$(".vertical-nav a:contains(page_header)").addClass("active");
+	$('ul.vertical-nav li:contains(' + page_header + ')').addClass("active");
 
 });
