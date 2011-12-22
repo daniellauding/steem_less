@@ -973,6 +973,13 @@ input[type=submit].btn {
 	&:hover {
 		#gradient > .vertical(#f9f9f9, #f7f7f7);
 	}
+	&.active {
+		color: #3399cc;
+		border:1px solid #70b9ff;
+		.box-shadow(0 0px 3px #a2d2ff);
+		background-color: #d9d7d7;
+		.border-radius(6px)
+	}
 }
 
 // CLOSE ICONS
@@ -1384,6 +1391,12 @@ p {
   max-width: 200px;
   text-decoration: none;
   .border-radius(4px);
+	a {
+		color:@white;
+		padding:4px 0px;
+		display:block;
+		text-align:left;
+	}
 }
 .twipsy-arrow {
   position: absolute;
@@ -1391,6 +1404,9 @@ p {
   height: 0;
 }
 
+.twipsy-pop {
+	display:none;
+}
 
 // POPOVERS
 // --------
@@ -1582,5 +1598,28 @@ p {
 		background:#ce4521;
 		color:@white;
 		.box-shadow(0px 1px 0px rgba(0,0,0,0.8));
+	}
+}
+
+// PRODUCT TYPE
+// -----------
+
+.product-type {
+	list-style-type:none;
+	padding:2px;
+	margin:10px 0 0 0;
+	overflow:hidden;
+	li {
+		float:left;
+		height:120px;
+		width:130px;
+		margin:0 15px 0 0;
+		text-align:center;
+		line-height:190px;
+		a {
+			display:block;
+			height:130px;
+			color:@gray;
+		}
 	}
 }
