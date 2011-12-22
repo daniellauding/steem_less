@@ -32,6 +32,6 @@ $(document).includeReady(function () {
 	  placement: 'below'
     });
 
-
+	$("table.tablesorter").tablesorter({ sortList: [[1,0]] });
 
 });

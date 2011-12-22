@@ -318,17 +318,26 @@ textarea[readonly] {
   font-size: @basefont;
   line-height: @baseline;
   color: @grayLight;
+	&.small {
+		font-size: @basefont - 2px;
+	}
 }
 .help-inline {
   padding-left: 5px;
   *position: relative; /* IE6-7 */
   *top: -5px; /* IE6-7 */
+	&.small {
+		font-size: @basefont - 2px;
+	}
 }
 
 // Big blocks of help text
 .help-block {
   display: block;
   max-width: 600px;
+	&.small {
+		font-size: @basefont - 2px;
+	}
 }
 
 // Inline Fields (input fields that appear as inline objects
