@@ -65,8 +65,8 @@ $(document).includeReady(function () {
 
 	$('ul.vertical-nav li:contains(' + page_header + ')').addClass("active");   
 	
-	$('.product-type li a').toggle(function(){
-			$('.product-type li').removeClass('active');
+	$('.product-type li a, .production-type li a, .pricing-options li a, .quantity-options li a').toggle(function(){
+			$('.product-type li, .production-type li, .pricing-options li, .quantity-options li').removeClass('active');
 			$(this).parent().addClass('active');
 		return false;
 		}, function() {
