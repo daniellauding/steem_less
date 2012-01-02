@@ -608,10 +608,56 @@ a.menu:after,
 
 }
 
+// FRAME
+// --------------
+
+.frame {
+	background:#fff;
+	position:relative;
+	padding:0;
+	border:1px solid #E7E7E7;
+	.thumbnail {
+		background:transparent url(gfx/bg_grid.png) repeat top left;
+		border:1px solid #F4F4F7;
+		img {
+			vertical-align:middle;
+			.box-shadow(0 0 4px rgba(0,0,0,0.3));
+			border:3px solid #fff;
+		}
+	}
+	&.small {
+		padding:10px;
+		width:200px;
+		.thumbnail {
+			width:auto;
+			height:auto;
+			padding:0 10px;
+			line-height:195px;
+			text-align:center;
+			.box-shadow(0px 0px 0px rgba(0,0,0,0));
+		}
+	}
+	&:after {
+		background: url(gfx/bg_frame.png) no-repeat scroll center bottom #FFFFFF;
+	    content: "";
+	    display: block;
+	    height: 10px;
+	    margin-bottom: -6px;
+	    margin-left: -10px;
+	    margin-right: -10px;
+	}
+}
+
 // THUMBNAIL
 // --------------
 
 .thumbnail {
+	display:table;
+	margin:0 auto;
+	position: relative;
+	padding: 3px;
+	background: white;
+	.box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
 	&.lifted {
 		display:table;
 		margin:0 auto;
