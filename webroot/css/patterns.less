@@ -629,10 +629,11 @@ a.menu:after,
 	&.small {
 		padding:10px;
 		width:200px;
+		height:180px;
 		.thumbnail {
-			width:190px;
 			height:auto;
-			line-height:195px;
+			line-height:171px;
+			display:block;
 			text-align:center;
 			.box-shadow(0px 0px 0px rgba(0,0,0,0));
 		}
@@ -640,10 +641,23 @@ a.menu:after,
 	&.medium {
 		padding:10px;
 		width:345px;
+		height:250px;
 		.thumbnail {
-			width:336px;
 			height:auto;
-			line-height:195px;
+			line-height:241px;
+			display:block;
+			text-align:center;
+			.box-shadow(0px 0px 0px rgba(0,0,0,0));
+		}
+	}
+	&.large {
+		padding:10px;
+		width:500px;
+		height:325px;
+		.thumbnail {
+			height:auto;
+			line-height:317px;
+			display:block;
 			text-align:center;
 			.box-shadow(0px 0px 0px rgba(0,0,0,0));
 		}
