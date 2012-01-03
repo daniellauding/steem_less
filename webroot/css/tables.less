@@ -13,6 +13,7 @@ table {
   padding: 0;
   font-size: @basefont;
   border-collapse: collapse;
+	&.input{display:block;}
   th,
   td {
     padding: 10px 10px 9px;
@@ -26,7 +27,14 @@ table {
   }
   td {
     vertical-align: top;
-    border-top: 1px solid #ddd;
+    /*border-top: 1px solid #ddd;*/
+	&.actions {
+		background:transparent;
+		border:0px solid transparent;
+		margin:0;
+		border-top:1px solid transparent;
+		padding:10px 10px 9px;
+	}
   }
   // When scoped to row, fix th in tbody
   tbody th {
@@ -72,6 +80,13 @@ table {
   }
   tbody tr:last-child td:last-child {
     .border-radius(0 0 4px 0);
+  }
+  td {
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+	&.actions{
+		border-top:1px solid #DDDDDD;
+	}
   }
 }
 

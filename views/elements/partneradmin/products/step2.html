@@ -80,60 +80,110 @@
 		</div>
 		
 		<hr/>
-	
-		<div class="clearfix">
-			
-			<div class="row">
-			
-    			<div class="input pages">
-			
-    				<label for="xlInput">Pages</label>
-    				<input class="mini" id="xlInput" name="xlInput" size="30" type="text">
-			
-    			</div>
-
-    			<div class="input stock">
-			
-    				<label for="xlInput">Stock</label>
-				
-    				<select name="normalSelect" id="normalSelect" class="xlarge">
-    					<option value="">-- Select --</option>
-    					<option value="1">4CC 90g SRA3</option>
-    					<option value="2">Scandia 2000 300g</option>
-    					<option value="4">Galarie Art Silk 170g</option>
-    					<option value="6">Galarie Art Silk 250g</option>
-    					<option value="8">Scandia 2000 115g</option>
-    					<option value="9">Galarie Art Silk 200g</option>
-    					<option value="10">Galarie Art Silk 130g</option>
-    					<option value="11">Scandia 2000 170g</option>
-    					<option value="12">Kalkeringspapper</option>
-    					<option value="18">Scandia 2000 200g</option>
-    					<option value="19">Mailman stående klaff</option>
-    					<option value="20">Xerox Colotech 300g</option>
-    					<option value="21">Galerie Art Gloss 300g</option>
-    					<option value="22">Galarie Art Silk 300g</option>
-    					<option value="23">Oklart</option>
-    					<option value="28">Art:813005, Sober C5 med remsa </option>
-    					<option value="31">Scandia 2000 300g </option>
-    					<option value="32">Invercote Creato 400g</option>
-    					<option value="33">4CC 120g SRA3</option>
-    					<option value="34">Galerie Art Silk 115g</option>
-    				</select>
-			
-			        <a class="add-row">+ Add Pages</a>
-    			</div>
-    			
-    			<div class="input actions">
-    			    
-    			    <a class="add" href="views/layouts/partneradmin/../../elements/partneradmin/products/#"><span>Add</span></a>
-    			    <a class="remove" href="views/layouts/partneradmin/../../elements/partneradmin/products/#"><span>Remove</span></a>
-				    
-				</div>
-			
-			</div>
-
-		</div>
 		
+		<table class="input">
+        	<thead>
+        		<tr>
+        			<th>Pages</th>
+        			<th>Stock</th>
+        			<th></th>
+        		</tr>
+        	</thead>
+
+        	<tbody>
+        		<tr>
+        			<td>
+        				<input class="mini" id="xlInput" name="xlInput" size="30" type="text">
+        			</td>
+        			<td>
+        				<select name="normalSelect" id="normalSelect" class="xlarge">
+        					<option value="">-- Select --</option>
+        					<option value="1">4CC 90g SRA3</option>
+        					<option value="2">Scandia 2000 300g</option>
+        					<option value="4">Galarie Art Silk 170g</option>
+        					<option value="6">Galarie Art Silk 250g</option>
+        					<option value="8">Scandia 2000 115g</option>
+        					<option value="9">Galarie Art Silk 200g</option>
+        					<option value="10">Galarie Art Silk 130g</option>
+        					<option value="11">Scandia 2000 170g</option>
+        					<option value="12">Kalkeringspapper</option>
+        					<option value="18">Scandia 2000 200g</option>
+        					<option value="19">Mailman stående klaff</option>
+        					<option value="20">Xerox Colotech 300g</option>
+        					<option value="21">Galerie Art Gloss 300g</option>
+        					<option value="22">Galarie Art Silk 300g</option>
+        					<option value="23">Oklart</option>
+        					<option value="28">Art:813005, Sober C5 med remsa </option>
+        					<option value="31">Scandia 2000 300g </option>
+        					<option value="32">Invercote Creato 400g</option>
+        					<option value="33">4CC 120g SRA3</option>
+        					<option value="34">Galerie Art Silk 115g</option>
+        				</select>
+
+    			        <a class="add-pages">+ Add Pages</a>
+        			</td>
+        			<td class="actions">
+        				<a href="#" class="add add-row"><span>Add</span></a>
+        				<a href="#" class="remove remove-row"><span>Remove</span></a>
+        			</td>			
+        		</tr>
+        	</tbody>
+        </table>
+        
+    
+<!--        <div class="clearfix rows">
+            
+            <div class="row">
+            
+                <div class="input pages">
+            
+                    <label for="xlInput">Pages</label>
+                    <input class="mini" id="xlInput" name="xlInput" size="30" type="text">
+            
+                </div>
+
+                <div class="input stock">
+            
+                    <label for="xlInput">Stock</label>
+                
+                    <select name="normalSelect" id="normalSelect" class="xlarge">
+                        <option value="">-- Select --</option>
+                        <option value="1">4CC 90g SRA3</option>
+                        <option value="2">Scandia 2000 300g</option>
+                        <option value="4">Galarie Art Silk 170g</option>
+                        <option value="6">Galarie Art Silk 250g</option>
+                        <option value="8">Scandia 2000 115g</option>
+                        <option value="9">Galarie Art Silk 200g</option>
+                        <option value="10">Galarie Art Silk 130g</option>
+                        <option value="11">Scandia 2000 170g</option>
+                        <option value="12">Kalkeringspapper</option>
+                        <option value="18">Scandia 2000 200g</option>
+                        <option value="19">Mailman stående klaff</option>
+                        <option value="20">Xerox Colotech 300g</option>
+                        <option value="21">Galerie Art Gloss 300g</option>
+                        <option value="22">Galarie Art Silk 300g</option>
+                        <option value="23">Oklart</option>
+                        <option value="28">Art:813005, Sober C5 med remsa </option>
+                        <option value="31">Scandia 2000 300g </option>
+                        <option value="32">Invercote Creato 400g</option>
+                        <option value="33">4CC 120g SRA3</option>
+                        <option value="34">Galerie Art Silk 115g</option>
+                    </select>
+            
+                    <a class="add-row">+ Add Pages</a>
+                </div>
+                
+                <div class="input actions">
+                    
+                    <a class="add" href="views/layouts/partneradmin/../../elements/partneradmin/products/#"><span>Add</span></a>
+                    <a class="remove" href="views/layouts/partneradmin/../../elements/partneradmin/products/#"><span>Remove</span></a>
+                    
+                </div>
+            
+            </div>
+
+        </div>
+         -->
 		<hr/>
 		
 		<div class="clearfix finishing">

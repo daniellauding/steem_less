@@ -73,4 +73,16 @@ $(document).includeReady(function () {
 			$(this).parent().removeClass('active');
         })
 
+	/* Add a row beneath */
+	
+	$('.add-row').click(function(){
+		$(this).parent().closest('tr').clone().appendTo('table');
+		return false;
+	});
+	
+	$('.remove-row').click(function(){
+		$(this).parent().closest('tr').remove();
+		return false;
+	});
+
 });
