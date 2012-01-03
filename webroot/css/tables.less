@@ -16,13 +16,14 @@ table {
 	&.input{display:block;}
   th,
   td {
-    padding: 10px 10px 9px;
+    padding: 10px 10px 9px 0;
     line-height: @baseline;
     text-align: left;
   }
   th {
     padding-top: 9px;
-    font-weight: bold;
+	padding-bottom:0px;
+    font-weight: normal;
     vertical-align: middle;
   }
   td {
@@ -33,7 +34,7 @@ table {
 		border:0px solid transparent;
 		margin:0;
 		border-top:1px solid transparent;
-		padding:10px 10px 9px;
+		padding:15px 10px 9px;
 	}
   }
   // When scoped to row, fix th in tbody
@@ -84,10 +85,16 @@ table {
   td {
     vertical-align: top;
     border-top: 1px solid #ddd;
+	padding-left:10px;
 	&.actions{
 		border-top:1px solid #DDDDDD;
 	}
   }
+	th{
+		padding-bottom:10px;
+	    font-weight: bold;
+		padding-left:10px;
+	}
 }
 
 
