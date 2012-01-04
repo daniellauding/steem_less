@@ -2,7 +2,7 @@ $(document).includeReady(function () {
 
 	/* Horizontal Nav */
 
-    var horizontal_ul = $('.nav, .breadcrumb, .tabs');
+    var horizontal_ul = $('.nav, .breadcrumb, .tabs, .category-menu');
 
     if (horizontal_ul.length) {
         horizontal_ul.children('li').hover(function() {

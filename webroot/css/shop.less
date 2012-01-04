@@ -3,11 +3,10 @@
  * ---------------------------------------------------------------------------- */
 
 body {
-	&#shop {
-		background:#F7F7F7;
-	}
-}
-
+&#shop {
+/* START HERE TO OVERRIDE BODY WITH ID #SHOP */
+background:#F7F7F7;
+	
 // NAVIGATION
 // ----------
 
@@ -15,6 +14,7 @@ body {
 
 .topbar div > ul,
 .nav {
+	&.right{float:right;}
   display: block;
   float: left;
   margin: 0 10px 0 0;
@@ -23,14 +23,20 @@ body {
   > li {
     display: block;
     float: left;
-	text-indent:15px;
 	&.divider {
 		#gradient > .vertical(rgba(0,0,0,0.07), rgba(255,255,255,0.04));
 		width:1px;
 		height:39px;
 
 	}
-  }
+ 	ul{
+		li{
+			a {
+				padding:10px 15px 11px 15px
+			}
+		}
+	}
+}
   a {
     display: block;
     float: none;
@@ -48,17 +54,135 @@ body {
   }
 }
 
-// Shop Nav
-// ----------
+// Category Nav
+
+.category-nav {
+	background:#F8F8F8;
+	border-bottom:1px solid rgba(0, 0, 0, 0.05);
+	margin-bottom:20px;
+}
+
+.page-header{height:37px;}
+
+.category-menu {
+  display: block;
+  margin: 0 10px 0 0;
+  position: relative;
+  left: 0;
+  > li {
+    display: block;
+    float: left;
+	&.divider {
+		#gradient > .vertical(rgba(0,0,0,0.07), rgba(255,255,255,0.04));
+		width:1px;
+		height:39px;
+
+	}
+  	&.menu-dropdown, .dropdown-menu {
+		top:37px;
+		border:1px solid rgba(0, 0, 0, 0.08);
+	}
+}
+  a {
+    display: inline-block;
+    float: none;
+    padding: 10px 10px 11px;
+    line-height: 16px;
+    text-decoration: none;
+	color:@gray;
+	&.active {font-weight:bold;}
+    &:hover {
+      color: @black;
+      text-decoration: underline;
+    }
+	&.dropdown-toggle {
+		&:after {
+			width: 0;
+			height: 0;
+			display: inline-block;
+			content: "&darr;";
+			text-indent: -99999px;
+			vertical-align: top;
+			margin-top: 6px;
+			margin-left: 4px;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 4px solid @black;
+			.opacity(50);
+		}
+	}
+  }
+  .active > a {
+    background-color: #222;
+    background-color: rgba(0,0,0,.5);
+  }
+}
 
 // Search
 
 .search {
 	float:right;
-	margin:13px 0 0;
+	margin:15px 0 0;
 	input#search-query {
 		.border-radius(14px);
 		padding:4px 15px 4px 30px;
 		width:174px;
 	}
+}
+
+// Product listing
+
+.item-list {
+	li {
+		margin-bottom:25px;
+		.product-name {
+			margin-top:9px;
+		}		
+		.meta {
+			text-align:center;
+			width:220px;
+			.category {
+				display:inline-block;
+				text-align:left;
+				color:@gray;
+				text-decoration:none;
+				&:hover {text-decoration:underline;}
+				span {
+					display:inline-block;
+					float:left;
+					width:16px;
+					height:15px;
+					margin-right:5px;
+				}
+			}
+		}
+	}
+}
+
+// Sidebar
+
+.sidebar {
+	
+	hr {
+		margin:5px 0 10px;
+	}
+	
+	.phone {
+		display:block;
+		text-indent:24px;
+		margin:15px 0 8px 8px;
+		font-weight:bold;
+	}
+
+	.mail {
+		display:block;
+		margin:0 0 0 8px;
+		text-indent:24px;
+	}
+	
+}
+
+	
+/* END HERE */
+}
 }

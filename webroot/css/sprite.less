@@ -121,11 +121,49 @@
 // Shop
 // ------
 
-.my-settings {
-	background:transparent url(gfx/shop.png) no-repeat 4px 11px;
-}
+body {
+	&#shop {
+		.user {
+			background:transparent url(gfx/shop.png) no-repeat 15px 13px;
+			text-indent:25px;
+			&:hover {
+				background:rgba(0,0,0,0.05) url(gfx/shop.png) no-repeat 15px 13px;
+			}
+		}
+		
+		.cart {
+			background:transparent url(gfx/shop.png) no-repeat 15px -69px;
+			text-indent:25px;
+			&:hover {
+				background:rgba(0,0,0,0.05) url(gfx/shop.png) no-repeat 15px -69px;
+			}
+		}
+		
+		.order-status {
+			background:transparent url(gfx/shop.png) no-repeat 15px -109px;
+			text-indent:25px;
+			&:hover {
+				background:rgba(0,0,0,0.05) url(gfx/shop.png) no-repeat 15px -109px;
+			}
+		}
 
-#search-query {
-	background:@white url(gfx/shop.png) no-repeat 9px -34px;
-	&:focus {color:@black;}
+		#search-query {
+			background:rgba(255,255,255,0.5) url(gfx/shop.png) no-repeat 9px -34px;
+			&:focus {color:@black;background-color:@white;}
+		}
+		
+		.category {
+			span {
+				background:transparent url(gfx/shop.png) no-repeat 0 -158px;
+			}
+		}
+		
+		.phone {
+			background:transparent url(gfx/shop.png) no-repeat 2px -238px;
+		}
+		
+		.mail {
+			background:transparent url(gfx/shop.png) no-repeat 0 -196px;
+		}
+	}
 }

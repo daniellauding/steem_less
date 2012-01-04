@@ -229,7 +229,7 @@ a:focus{outline:none;}
 	  font-size:@basefont - 1px;
       text-shadow: 0 1px 0 rgba(0,0,0,.5);
       &:hover {
-		background:#203b54;
+		background:rgba(255,255,255,0.05);
         color: @white;
       }
     }
@@ -708,7 +708,7 @@ a.menu:after,
 		}
 	}
 	&.long {
-		height:245px;
+		height:250px;
 		.thumbnail {
 			height:200px;
 			line-height:190px;
@@ -1334,7 +1334,7 @@ input[type=submit].btn {
   }
   a:hover,
   .active a {
-    background-color: lighten(@blue, 45%);
+    background-color: lighten(@gray, 45%);
   }
   .disabled a,
   .disabled a:hover {
@@ -1371,9 +1371,10 @@ input[type=submit].btn {
   h6 {
 	line-height:18px;
 }
-p {
+p,ul li {
 	font-size:@basefont - 2px;
 	}
+ul li {margin:0 0 10px;color:@grayDark;}	
 }
 
 
@@ -1856,3 +1857,5 @@ p {
 		}
 	}
 }
+
+.bold {font-weight:bold;}
