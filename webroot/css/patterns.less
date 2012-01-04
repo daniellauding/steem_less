@@ -592,17 +592,9 @@ a.menu:after,
 		float:right;
 		width:85px;
 		color:@gray;
-			span{
-				display:block;
-				float:left;
-				width:18px;
-				height:18px;
-				margin:6px 3px 0 0;
-			}
+		text-indent:23px;
 			&:hover {
 				color:@blue;
-				span {
-				}
 			}
 	}
 
@@ -1671,23 +1663,19 @@ p {
 .edit,
 .copy,
 .delete,
-.preview {
+.preview,
+.view {
 	display:block;
 	font-size:@basefont - 2px;
 	overflow:hidden;
 	color:@gray;
-		span{
-			display:block;
-			float:left;
-			width:18px;
-			height:18px;
-			margin:2px 4px 0 0;
-		}
-		&:hover {
-			color:@blue;
-			span {
-			}
-		}
+	text-indent:23px;
+	margin:0 0 3px;
+	cursor:pointer;
+	text-transform:capitalize;
+	&:hover {
+		color:@blue;
+	}
 }
 
 .add {
@@ -1844,7 +1832,7 @@ p {
 	&:after {
 		content:"&";
 		position:absolute;
-		left:340px;
+		left:351px;
 		top:15px;
 		font-size:@basefont + 15px;
 		color:@grayLighter;

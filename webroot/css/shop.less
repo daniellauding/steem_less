@@ -1,10 +1,63 @@
+/* Shop.less
+ * All styling that belongs in the shop
+ * ---------------------------------------------------------------------------- */
+
 body {
 	&#shop {
 		background:#F7F7F7;
 	}
 }
 
+// NAVIGATION
+// ----------
+
+// Topbar Nav
+
+.topbar div > ul,
+.nav {
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  position: relative;
+  left: 0;
+  > li {
+    display: block;
+    float: left;
+	text-indent:15px;
+	&.divider {
+		#gradient > .vertical(rgba(0,0,0,0.07), rgba(255,255,255,0.04));
+		width:1px;
+		height:39px;
+
+	}
+  }
+  a {
+    display: block;
+    float: none;
+    padding: 10px 10px 11px;
+    line-height: 16px;
+    text-decoration: none;
+    &:hover {
+      color: @white;
+      text-decoration: none;
+    }
+  }
+  .active > a {
+    background-color: #222;
+    background-color: rgba(0,0,0,.5);
+  }
+}
+
+// Shop Nav
+// ----------
+
+// Search
+
 .search {
 	float:right;
 	margin:13px 0 0;
+	input#search-query {
+		.border-radius(14px);
+		text-indent:25px;
+	}
 }
