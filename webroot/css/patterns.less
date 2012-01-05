@@ -1068,6 +1068,7 @@ a.menu:after,
     padding: 7px 9px 7px;
     font-size: @basefont - 2px;
   }
+	
 }
 // Super jank hack for removing border-radius from IE9 so we can keep filter gradients on alerts and buttons
 :root .alert-message,
@@ -1697,6 +1698,40 @@ ul li {margin:0 0 10px;color:@grayDark;}
 }
 
 .remove {
+	display:inline-block;
+	.border-radius(14px);
+	width:15px;
+	text-align:center;
+	height:15px;
+	background:@grayLight;
+	color:@white;
+	position:relative;
+	span {
+		font-weight:normal;
+		text-indent:-9999px;
+		display:block;
+	}
+	&:hover{text-decoration:none;color:@grayLighter;}
+}
+
+.next {
+	display:inline-block;
+	.border-radius(14px);
+	width:15px;
+	text-align:center;
+	height:15px;
+	background:@grayLight;
+	color:@white;
+	position:relative;
+	span {
+		font-weight:normal;
+		text-indent:-9999px;
+		display:block;
+	}
+	&:hover{text-decoration:none;color:@grayLighter;}
+}
+
+.prev {
 	display:inline-block;
 	.border-radius(14px);
 	width:15px;

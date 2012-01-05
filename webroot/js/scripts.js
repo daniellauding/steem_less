@@ -44,8 +44,7 @@ $(document).includeReady(function () {
         title: function(){
           return $(".twipsy-pop").html();
         }
-      });
-		
+      });		
 		
 	$(".edit").toggle(function(){
 		$(this).twipsy('show');
@@ -54,7 +53,6 @@ $(document).includeReady(function () {
 		$(this).twipsy('hide');
 	});
 	
-
 	/* Tablesort */
 
 	$("table.tablesorter").tablesorter({ sortList: [[1,0]] });
@@ -63,7 +61,7 @@ $(document).includeReady(function () {
 	
 	var page_header = $('div.page-header > h1').clone().children().remove().end().text().trim()
 
-	$('ul.vertical-nav li:contains(' + page_header + ')').addClass("active");   
+	$('ul.vertical-nav li:contains(" + page_header + ")').addClass("active");   
 	
 	$('.product-type li a, .production-type li a, .pricing-options li a, .quantity-options li a').toggle(function(){
 			$('.product-type li, .production-type li, .pricing-options li, .quantity-options li').removeClass('active');
@@ -71,7 +69,7 @@ $(document).includeReady(function () {
 		return false;
 		}, function() {
 			$(this).parent().removeClass('active');
-        })
+     });
 
 	/* Add a row beneath */
 	
@@ -84,5 +82,50 @@ $(document).includeReady(function () {
 		$(this).parent().closest('tr').remove();
 		return false;
 	});
+	
+	/* SLIDER */
+	
+	$('#slideshow').after('<ul class="slideshow-thumbs">').cycle({ 
+	    fx:     'turnLeft', 
+	    speed:  'fast', 
+	    timeout: 0, 
+	    pager:  '.slideshow-thumbs', 
+
+	    // callback fn that creates a thumbnail to use as pager anchor 
+	    pagerAnchorBuilder: function(idx, slide) { 
+	        return '<li><a href="#"><img src="' + slide.src + '" width="50" height="50" /></a></li>'; 
+	    } 
+	});
+	
+	/* Rollover btn */
+		
+	$('.btn-flip').hover(function() {
+		$('.btn-flip .price').hide();
+		$('.btn-flip .buy').show();
+	});
+	
+	$('.btn-flip .buy').hover(function() {
+		$('.btn-flip .buy').hide();
+		$('.btn-flip .price').show();
+	});
+	
+	/* Hide and show of the options */
+	$('.btn-flip').live('mouseenter mouseleave', function (e) {
+
+		if (e.type == 'mouseenter') {
+		  
+ 		   $(this).find('.price').show();
+		   $(this).find('.buy').hide();
+
+		   
+		} else {	
+		   $(this).find('.buy').show();
+		   $(this).find('.price').hide();
+		   
+		}
+	});
+	
+
+	
 
 });

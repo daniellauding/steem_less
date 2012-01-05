@@ -134,10 +134,16 @@ background:#F7F7F7;
 
 .item-list {
 	li {
-		margin-bottom:25px;
-		.product-name {
-			margin-top:9px;
-		}		
+		margin-bottom:25px;	
+		a {
+			.product-name {
+				margin-top:9px;
+				small{font-size:@basefont - 2.4px;font-style:italic;}
+			}
+			&:hover {
+				text-decoration:none;
+			}
+		}
 		.meta {
 			text-align:center;
 			width:220px;
@@ -182,6 +188,227 @@ background:#F7F7F7;
 	
 }
 
+// Product
+
+.product {
+	overflow:hidden;
+	.product-image {
+		width:360px;
+		float:left;
+		padding:0 0 10px;
+		.frame {
+			height:auto;
+			overflow:hidden;
+			.thumbnail {
+				height:317px;
+				img {
+					max-width:250px;
+				}
+			}
+			.slideshow-thumbs {
+				background:red;
+				overflow:hidden;
+				clear:both;
+				list-style-type:none;
+				margin:10px 0 0 15px;
+				padding:0;
+				li {
+					overflow:hidden;
+					float:left;
+					width:50px;
+					margin:0 10px 0 0;
+					background:@white;
+					border:1px solid @grayLighter;
+					a{}
+						&.activeSlide {
+							a {}
+						}
+					}
+				}
+		}
+	}
+
+	.product-info {
+		float:left;
+		width:310px;
+		margin-left:20px;
+	}
+
+	.specifications {
+		margin:0;
+		padding:0;
+		li {
+			border-bottom: 1px solid rgba(0,0,0,0.04);
+		    display: block;
+		    padding: 15px 0 15px 30px;
+		}
+	}
+}
+
+.description {
+	margin-top:15px;
+	background:rgba(0,0,0,0.04);
+	padding:10px 20px 5px;
+	position:relative;
+	p {
+		font-size:@basefont - 1.3px;
+		line-height:@baseline + 5px;
+	}
+	&:before {
+		width: 30px;
+		height: 10px;
+		display: inline-block;
+		content: "&darr;";
+		text-indent: -99999px;
+		background:@gray;
+		.opacity(15);
+		transform:rotate(35deg);
+		-ms-transform:rotate(35deg); /* IE 9 */
+		-moz-transform:rotate(35deg); /* Firefox */
+		-webkit-transform:rotate(35deg); /* Safari and Chrome */
+		-o-transform:rotate(35deg); /* Opera */
+		right:-8px;
+		top:2px;
+		position:absolute;
+	}
+	&:after {
+		width: 30px;
+		height: 10px;
+		display: inline-block;
+		content: "&darr;";
+		text-indent: -99999px;
+		background:@gray;
+		.opacity(15);
+		transform:rotate(-35deg);
+		-ms-transform:rotate(-35deg); /* IE 9 */
+		-moz-transform:rotate(-35deg); /* Firefox */
+		-webkit-transform:rotate(-35deg); /* Safari and Chrome */
+		-o-transform:rotate(-35deg); /* Opera */
+		left:-8px;
+		top:2px;
+		position:absolute;
+	}
+}
+
+dl.qty {
+	margin-top:7px;
+	dt {
+		clear: left;
+		float: left;
+		width: 80px;
+		margin: 0;
+		padding: 5px;
+		font-weight:normal;
+		line-height:@baseline - 4px;
+		&:nth-child(1){font-weight:bold;}
+	}
+	dd {
+		margin-left: 80px;
+		padding: 5px;
+		line-height:@baseline - 4px;
+		&:nth-child(2){font-weight:bold;}
+	}
+}
+
+.product-variation {
+	margin-top:20px;
+	width:690px;
+	clear:both;
+	overflow:hidden;
+	.filter {
+		overflow:hidden;
+		border-bottom:1px solid rgba(0, 0, 0, 0.05);
+		margin-bottom:15px;
+		h4 {
+			text-align:left;
+			width:100px;
+			float:left;
+			font-size:@basefont - 1px;
+			color:@gray;
+		}
+		.category-menu {
+			display:block;
+			float:right;
+			overflow:hidden;
+		}
+	}
+	.variation-list {
+		clear:both;
+		margin:0 0 0;
+		li {
+			float:none;
+			overflow:hidden;
+			border-bottom:1px solid rgba(0,0,0,0.07);
+			margin:0 0 10px;
+			padding:0 0 10px;
+			.btn-flip {
+				display:block;
+				float:left;
+				position:relative;
+				height:30px;
+				.btn {
+					width:50px;
+					text-align:center;
+					&.price {
+					}
+					&.buy {
+						display:none;
+					}
+				}
+			}
+			.variation-info {
+				width:300px;
+				float:left;
+				h3 {
+					line-height:normal;
+					font-size:@basefont + 1px;
+				}
+			}
+
+			.variation-action {
+				float:right;				
+				.btn-group {
+					#gradient > .vertical-three-colors(#ffffff, #ffffff, 25%, darken(#ffffff, 10%)); // Don't use .gradientbar() here since it does a three-color gradient
+					float:left;
+					overflow:hidden;
+					.border-radius(4px);
+					border:1px solid rgba(0,0,0,0.15);
+					margin-right:10px;
+					.send {
+						background-position:10px -552px;
+						width:32px;
+						height:27px;
+						text-indent:-999px;
+						display:block;
+						float:left;
+						margin:0;
+						border-right:1px solid rgba(0,0,0,0.15);
+						&:hover {
+							background-color:rgba(0,0,0,0.05);
+							.box-shadow(0px 3px 2px #fff inset);
+						}
+					}
+
+					.preview {
+						background-position:8px -791px;
+						width:32px;
+						height:27px;
+						text-indent:-999px;
+						display:block;
+						float:left;
+						margin:0;
+						&:hover {
+							background-position:8px -791px;
+							background-color:rgba(0,0,0,0.05);
+							.box-shadow(0px 3px 2px #fff inset);
+						}
+					}
+				}
+				.qty {float:left;margin:1px 5px 0 0;}
+			}
+		}
+	}
+}
 	
 /* END HERE */
 }
