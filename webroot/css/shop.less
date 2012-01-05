@@ -248,8 +248,9 @@ background:#F7F7F7;
 .description {
 	margin-top:15px;
 	background:rgba(0,0,0,0.04);
-	padding:10px 20px 5px;
+	padding:10px 20px 2px;
 	position:relative;
+	.box-shadow(0px 2px 3px rgba(0,0,0,0.15));
 	p {
 		font-size:@basefont - 1.3px;
 		line-height:@baseline + 5px;
@@ -291,7 +292,7 @@ background:#F7F7F7;
 }
 
 dl.qty {
-	margin-top:7px;
+	margin-top:10px;
 	dt {
 		clear: left;
 		float: left;
@@ -330,9 +331,14 @@ dl.qty {
 			display:block;
 			float:right;
 			overflow:hidden;
+			margin-right:0;
+			li:last-child {
+				a{padding-right:0;}
+			}
 		}
 	}
 	.variation-list {
+		list-style-type:none;
 		clear:both;
 		margin:0 0 0;
 		li {
