@@ -29,10 +29,10 @@ $(document).includeReady(function () {
 
 	/* Twipsy */
 	
-    $(".client-nav [rel=twipsy]").twipsy({
+    $("[rel=twipsy]").twipsy({
       live: true,
       delayOut: 0,
-	  placement: 'below'
+	  placement: 'above'
     });
 
 	/* TWIPSY POP */
@@ -114,8 +114,8 @@ $(document).includeReady(function () {
 
 		if (e.type == 'mouseenter') {
 		  
- 		   $(this).find('.price').show();
-		   $(this).find('.buy').hide();
+ 		   $(this).find('.price').hide();
+		   $(this).find('.buy').show();
 
 		   
 		} else {	

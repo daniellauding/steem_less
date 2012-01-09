@@ -2,6 +2,15 @@
  * All styling that belongs in the shop
  * ---------------------------------------------------------------------------- */
 
+.container {
+	.content {
+		margin-top:20px;
+	}
+	.sidebar {
+		margin-top:23px;
+	}
+}
+
 body {
 &#shop {
 /* START HERE TO OVERRIDE BODY WITH ID #SHOP */
@@ -59,7 +68,7 @@ background:#F7F7F7;
 .category-nav {
 	background:#F8F8F8;
 	border-bottom:1px solid rgba(0, 0, 0, 0.05);
-	margin-bottom:20px;
+/*	margin-bottom:20px;*/
 }
 
 .page-header{height:37px;}
@@ -168,7 +177,7 @@ background:#F7F7F7;
 // Sidebar
 
 .sidebar {
-	margin-top:25px;
+/*	margin-top:25px;*/
 	hr {
 		margin:5px 0 10px;
 	}
@@ -191,7 +200,7 @@ background:#F7F7F7;
 // Product
 
 .product {
-	margin-top:25px;
+	margin-top:4px;
 	overflow:hidden;
 	.product-image {
 		width:360px;
@@ -238,7 +247,7 @@ background:#F7F7F7;
 
 	.specifications {
 		margin:0;
-		padding:0;
+		padding:0 20px;
 		li {
 			border-bottom: 1px solid rgba(0,0,0,0.04);
 		    display: block;
@@ -343,6 +352,7 @@ dl.qty {
 		list-style-type:none;
 		clear:both;
 		margin:0 0 0;
+		padding:0 10px;
 		li {
 			float:none;
 			overflow:hidden;
@@ -350,12 +360,13 @@ dl.qty {
 			margin:0 0 10px;
 			padding:0 0 10px;
 			.btn-flip {
+				width:60px;
 				display:block;
 				float:left;
 				position:relative;
 				height:30px;
 				.btn {
-					width:50px;
+					width:60px;
 					text-align:center;
 					&.price {
 					}
